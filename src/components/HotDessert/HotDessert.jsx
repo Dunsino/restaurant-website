@@ -35,9 +35,14 @@ const HotDessert = () => {
     <section>
       <div className="container py-12">
         {/* heading section */}
-        <h3 className="text-2xl font-semibold text-darkGreen uppercase py-8">
+        <motion.h3
+          variants={SlideUp(0)}
+          initial="hidden"
+          whileInView="show"
+          className="text-2xl font-semibold text-darkGreen uppercase py-8"
+        >
           Hot Desserts
-        </h3>
+        </motion.h3>
 
         {/* grid section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
