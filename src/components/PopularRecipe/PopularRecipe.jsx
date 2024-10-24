@@ -4,7 +4,6 @@ import Food2 from "../../assets/food/food2-plate.png";
 import Food3 from "../../assets/food/banner.png";
 import { motion } from "framer-motion";
 import { SlideUp } from "../Hero/Hero";
-import { div } from "framer-motion/client";
 
 const PopularRecipeData = [
   {
@@ -36,7 +35,7 @@ const PopularRecipe = () => {
         <motion.h3
           variants={SlideUp(0.5)}
           initial="hidden"
-          whileInView={"show"}
+          whileInView="show"
           className="text-4xl text-center font-league font-semibold uppercase py-8"
         >
           {" "}
@@ -48,7 +47,12 @@ const PopularRecipe = () => {
           {PopularRecipeData.map((item) => {
             return (
               // eslint-disable-next-line react/jsx-key
-              <div className="group space-y-3 text-center bg-white/50 shadow-xl p-3 rounded-xl">
+              <motion.div
+                variants={SlideUp(0.6)}
+                initial="hidden"
+                whileInView="show"
+                className="group space-y-3 text-center bg-white/50 shadow-xl p-3 rounded-xl"
+              >
                 <img
                   src={item.img}
                   alt=""
@@ -63,7 +67,7 @@ const PopularRecipe = () => {
                     {item.name}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

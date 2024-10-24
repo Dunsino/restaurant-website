@@ -4,7 +4,6 @@ import Food2 from "../../assets/food/food2-plate.png";
 import Food3 from "../../assets/food/banner.png";
 import { motion } from "framer-motion";
 import { SlideUp } from "../Hero/Hero";
-import { div } from "framer-motion/client";
 
 const HotDessertData = [
   {
